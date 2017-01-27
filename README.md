@@ -19,6 +19,7 @@ Take a moment to get familiar with the Node JS docs. At first it looks more cryp
   - `/message GET` - Get all the messages
   - `/message POST` - Post a message
 - Any request for a non-existing route should return a `404` HTTP code.
+- Take this monstrous complex file you have created, and divide it in several modules that are responsible for each part (server and middleware bootstrap, router, data-store). Isn’t it much cleaner? Modularity is a key concept in software engineering.
 - Now modify your client so that:
   - When it loads, it gets all messages from the server.
   - Each time a new message is written, it posts it to the server.
