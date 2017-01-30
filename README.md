@@ -8,16 +8,18 @@ Finally, use [Nodemon](https://github.com/remy/nodemon) it will make your life m
 
 ### Bare Node
 
-Take a moment to get familiar with the Node JS docs. At first it looks more cryptic than other documentation you’ve seen before, but as always it’s just a matter of getting used to it. Here’s [an example](https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback), make sure you can fully understand it before moving forward (if you get stuck ask for help).
+Check out the difference between [blocking and non-blocking code](https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/), and read the [anatomy of an HTTP transaction](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/). Then take a moment to get familiar with the Node JS docs. At first it looks more cryptic than other documentation you’ve seen before, but as always it’s just a matter of getting used to it. Here’s [an example](https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback), make sure you can fully understand it before moving forward (if you get stuck ask for help).
 
 - Following [this template](https://nodejs.org/api/synopsis.html) create an `index.js` file that contains a basic Node server running on port `3000`. and responds `'Hello world'` to any request it receives.
 - In the same file, create a basic router that serves static assets from the `/client` folder (for this you’ll need to use some regex combined with the [Node file system API](https://nodejs.org/api/fs.html)), and check that your client correctly loads in the browser.
 - Create a simple data-store on your server, that is composed of two parts:
-  - An in-memory JS object (e.g. `const db = {messages: []}`) that can store all your chat messages.
-  - A `db.json` file on disk, where all the messages in memory are dumped and persisted every five seconds.
+  - An in-memory JS object (e.g. `const db = {msgs: []}`) that can store all your chat messages.
+  - A `data.json` file on disk, where all the messages in memory are dumped and persisted every five seconds. [Config Nodemon](https://github.com/remy/nodemon#config-files) so that it ignores changes to this file (to avoid continuous reloading), and use [`.gitignore`](https://git-scm.com/docs/gitignore) to exclude the file from your respository (you don’t want the messages data to be part of the app code).
 - Your server should expose the following REST API (use [Postman](https://www.getpostman.com/) for testing):
   - `/message GET` - Get all the messages
   - `/message POST` - Post a message
+
+  For the `POST` route to work you need to create a request [body parser](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#request-body).
 - Any request for a non-existing route should return a `404` HTTP code.
 - Take this monstrous complex file you have created, and divide it in several modules that are responsible for each part (server and middleware bootstrap, router, data-store). Isn’t it much cleaner? Modularity is a key concept in software engineering.
 - Now modify your client so that:
