@@ -1,6 +1,6 @@
-# Chat Server
+# Chat server
 
-It’s time to move to the back-end side of the force! The chat client you created needs to be paired with its server counterpart. To begin, copy all the files you had in the `/app` folder from the previous repo into the `/client` folder of this repo.
+It’s time to move to the back-end side of the force! The chat client you created needs to be paired with its server counterpart.
 
 This project is divided in 3 steps, aim to complete one section per day. For each section use the respective folder in the `/server` directory, and save the required dependencies in the global `package.json`.
 
@@ -46,7 +46,9 @@ Directly from the creators of Express, meet its successor: Koa. As always, start
 
 To install the required dependencies run `npm install`.
 
-Now you can use `gulp lint` to check your syntax before committing. Remember to make small, incremental, and descriptive commits along the way.
+Now copy all the files you had in the `/app` folder of the `chat-client` repo into the `/client` folder of this repo.
+
+You’re ready to go! Remember to make small, incremental, and descriptive commits along the way.
 
 ## Extra credits
 
