@@ -10,7 +10,7 @@ function addDefSrcIgnore (srcArr) {
   return srcArr.concat([
     '!**/REMOVE{,/**}',
     '!node_modules{,/**}',
-    '!bower_components{,/**}',
+    '!client/bower_components{,/**}',
     '!private{,/**}',
     '!dist{,/**}',
     '!.git{,/**}',
