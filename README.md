@@ -37,10 +37,10 @@ Would you like to be able to do all of this much faster? If so, you’re ready t
 
 ### Koa
 
-Directly from the creators of Express, meet its successor: Koa. As always, start checking out [the docs](http://koajs.com/), and compare where it differs from Express.
+Directly from the creators of Express, meet its successor: Koa. Before diving into it, make sure you feel comfortable using different async code patterns by completing the [async-exercise](https://github.com/codeworksbcn/async-exercise).
 
-- Now recreate your server using Koa.
-- Once you’re done, get familiar with [JS promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise), and switch all your async callbacks to them, “yielding” results in a synchronous fashion.
+- Now, check out [the docs](http://koajs.com/), and compare where Koa differs from Express.
+- Finally rebuild your server, taking advantage of the new APIs, wrapping callbacks into Promises, and using async/await, to “yield” results in a synchronous fashion.
 
 ## Getting started
 
@@ -52,4 +52,4 @@ You’re ready to go! Remember to make small, incremental, and descriptive commi
 
 ## Extra credits
 
-- Add unit tests for each version of the server. You’ll need to install [Jasmine](https://jasmine.github.io/) and save it as a [dev-dependency](https://docs.npmjs.com/cli/install) in your project (read the docs and see how it works).
+- Add unit tests for each version of your server, using [Jest](https://jestjs.io/) as a [dev-dependency](https://docs.npmjs.com/cli/install) (read the docs and see how it works).
