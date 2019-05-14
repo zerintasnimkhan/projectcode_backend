@@ -14,9 +14,9 @@ Check out the difference between [blocking and non-blocking code](https://nodejs
 
 - In the same file, create a basic router that serves static assets from the `/client` folder (for this you’ll need to use some regex combined with the [Node file system API](https://nodejs.org/api/fs.html)), and check that your client correctly loads in the browser.
 
-- Create a simple data-store on your server, that is composed of two parts:
-  - An in-memory JS object (e.g. `const db = {msgs: []}`) that can store all your chat messages.
-  - A `data.json` file on disk, where all the messages in memory are dumped and persisted every five seconds. [Config Nodemon](https://github.com/remy/nodemon#config-files) so that it ignores changes to this file (to avoid continuous reloading), and use [`.gitignore`](https://git-scm.com/docs/gitignore) to exclude the file from your respository (you don’t want the messages data to be part of the app code).
+- Create a simple data store on your server, which acts as a rudimentary database, and is composed of two parts:
+  - An in-memory JS object (e.g. `const db = {msgs: []}`) that stores all your chat messages.
+  - A `data.json` file on disk, where you dump and persist all those in-memory messages every five seconds. [Config Nodemon](https://github.com/remy/nodemon#config-files) so that it ignores changes to this file (to avoid continuous reloading), and use [`.gitignore`](https://git-scm.com/docs/gitignore) to exclude the file from your respository (you don’t want the messages data to be part of the app code).
 
 - Your server should expose the following REST API (use [Postman](https://www.getpostman.com/) for testing):
   - `/message GET` - Get all the messages
