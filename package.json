@@ -1,11 +1,11 @@
 {
   "name": "codeworks-chat-server-exercise",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "A Codeworks exercise to train students",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "codeworksbcn/chat-server-exercise"
+    "url": "codeworks/chat-server-exercise"
   },
   "scripts": {
     "precommit": "gulp lint"
