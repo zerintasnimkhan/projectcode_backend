@@ -51,7 +51,7 @@ Would you like to be able to do all of this much faster? If so, you’re ready t
 Directly from the creators of Express, meet its successor: Koa. Before diving into it, make sure you feel comfortable using different async code patterns by completing the [async-exercise](https://github.com/codeworks/async-exercise).
 
 - Now, check out [the docs](http://koajs.com/), and compare where Koa differs from Express.
-- Finally rebuild your server, taking advantage of the new APIs, wrapping callbacks into Promises, and using async/await, to “yield” results in a synchronous fashion.
+- Finally rebuild your server, taking advantage of the new APIs.
 
 ## Getting started
 

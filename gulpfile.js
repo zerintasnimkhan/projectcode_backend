@@ -8,7 +8,7 @@ const $ = require('gulp-load-plugins')();
 // when generating the glob patterns array for gulp.src()
 function addDefSrcIgnore (srcArr) {
   return srcArr.concat([
-    '!**/REMOVE{,/**}',
+    '!**/node_modules{,/**}',
     '!node_modules{,/**}',
     '!private{,/**}',
     '!dist{,/**}',
@@ -43,7 +43,7 @@ function lintCss () {
 // Remove solutions from exercises
 function removeSolutions () {
   del.sync('dist');
-  return gulp.src(addDefSrcIgnore(['**']), {dot: true})
+  return gulp.src(addDefSrcIgnore(['**', '!**/REMOVE{,/**}']), {dot: true})
     .pipe($.replace(/^\s*(\/\/|<!--|\/\*)\s*REMOVE-START[\s\S]*?REMOVE-END\s*(\*\/|-->)?\s*$/gm, ''))
     .pipe(gulp.dest('dist'));
 }
