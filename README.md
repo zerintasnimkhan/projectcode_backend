@@ -14,9 +14,7 @@ Check out the difference between [blocking and non-blocking code](https://nodejs
 
 - In the same file, create a basic router that serves static assets from the `/client` folder (for this you’ll need to use some regex combined with the [Node file system API](https://nodejs.org/api/fs.html)), and check that your client correctly loads in the browser.
 
-- Create a simple data store on your server, which acts as a rudimentary database, and is composed of two parts:
-  - An in-memory JS object (e.g. `const db = {msgs: []}`) that stores all your chat messages.
-  - A `data.json` file on disk, where you dump and persist all those in-memory messages every five seconds. [Config Nodemon](https://github.com/remy/nodemon#config-files) so that it ignores changes to this file (to avoid continuous reloading), and use [`.gitignore`](https://git-scm.com/docs/gitignore) to exclude the file from your respository (you don’t want the messages data to be part of the app code).
+- Create a simple data store on your server, which acts as a rudimentary database. This store will be replaced in the future with a real database but, for now, it can be an in-memory JS object (e.g. `const db = {msgs: []}`) that stores all your chat messages. Keep in mind that those messages will be erased every time that the server is restarted.
 
 - Your server should expose the following REST API (use [Postman](https://www.getpostman.com/) for testing):
   - `/message GET` - Get all the messages
@@ -63,4 +61,5 @@ You’re ready to go! Remember to make small, incremental, and descriptive commi
 
 ## Extra credits
 
+- Persist your messages in-memory so that they're not erased when the server restarts. Create a `data.json` file on disk, where you dump and persist all those in-memory messages every five seconds. [Config Nodemon](https://github.com/remy/nodemon#config-files) so that it ignores changes to this file (to avoid continuous reloading), and use [`.gitignore`](https://git-scm.com/docs/gitignore) to exclude the file from your respository (you don’t want the messages data to be part of the app code).
 - Add unit tests for each version of your server, using [Jest](https://jestjs.io/) as a [dev-dependency](https://docs.npmjs.com/cli/install) (read the docs and see how it works).
