@@ -32,8 +32,8 @@ function showMessage (msg) {
 
 function simulateIncomingMessages () {
   setTimeout(() => {
-    $.get('http://quotes.stormconsultancy.co.uk/random.json', data => {
-      const msg = new Message(data.quote, false, Date.now());
+    $.get('https://cw-quotes.herokuapp.com/api/quotes/random', data => {
+      const msg = new Message(data.result.text, false, Date.now());
 
       showMessage(msg);
       scrollToBottom ();
