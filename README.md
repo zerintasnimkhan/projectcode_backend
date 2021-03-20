@@ -14,7 +14,7 @@ Check out the difference between [blocking and non-blocking code](https://nodejs
 
 - In the same file, create a basic router that serves static assets from the `/client` folder (for this you’ll need to use some regex combined with the [Node file system API](https://nodejs.org/api/fs.html)), and check that your client correctly loads in the browser.
 
-- Create a simple data store on your server, which acts as a rudimentary database. This store will be replaced in the future with a real database but, for now, it can be an in-memory JS object (e.g. `const db = {msgs: []}`) that stores all your chat messages. Keep in mind that those messages will be erased every time that the server is restarted.
+- Create a simple data store on your server, which acts as a rudimentary database. This store will be replaced in the future with a real database but, for now, it can be an in-memory JS object (e.g. `const db = {msgs: []}`) that stores all your chat messages. Keep in mind that those messages will be erased every time the server is restarted.
 
 - Your server should expose the following REST API (use [Postman](https://www.getpostman.com/) for testing):
   - `/message GET` - Get all the messages
