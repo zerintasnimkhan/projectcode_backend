@@ -46,7 +46,7 @@ Would you like to be able to do all of this much faster? If so, you’re ready t
 
 ### Koa
 
-Directly from the creators of Express, meet its successor: Koa. Before diving into it, make sure you feel comfortable using different async code patterns by completing the [async-exercise](https://github.com/codeworks/async-exercise).
+Directly from the creators of Express, meet its successor: Koa. Before diving into it, make sure you feel comfortable using different async code patterns by completing the [async-exercise](https://github.com/codeworks/async-patterns-exercise).
 
 - Now, check out [the docs](http://koajs.com/), and compare where Koa differs from Express.
 - Finally rebuild your server, taking advantage of the new APIs.

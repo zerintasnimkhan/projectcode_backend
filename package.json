@@ -1,6 +1,6 @@
 {
   "name": "codeworks-chat-server-exercise",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A Codeworks exercise to train students",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,8 @@
     "url": "codeworks/chat-server-exercise"
   },
   "scripts": {
-    "precommit": "gulp lint"
+    "precommit": "gulp lint",
+    "test": "echo \"No test specified\""
   },
   "author": "Codeworks",
   "license": "UNLICENSED",
