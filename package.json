@@ -1,6 +1,6 @@
 {
   "name": "codeworks-chat-server-exercise",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "description": "A Codeworks exercise to train students",
   "main": "index.js",
   "repository": {
@@ -9,12 +9,17 @@
   },
   "scripts": {
     "precommit": "gulp lint",
-    "test": "echo \"No test specified\""
+    "test:node": "mocha server/test/node.test.js --exit",
+    "test:express": "mocha server/test/express.test.js --exit",
+    "test:koa": "mocha server/test/koa.test.js --exit",
+    "test": "npm run test:node && npm run test:express && npm run test:koa"
   },
   "author": "Codeworks",
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "cz-changelog": "^1.0.1",
     "del": "^6.0.0",
     "eslint": "^7.28.0",
@@ -26,6 +31,7 @@
     "gulp-replace": "^1.1.3",
     "gulp-stylelint": "^13.0.0",
     "husky": "6.0.0",
+    "mocha": "^10.0.0",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "^22.0.0"
   },

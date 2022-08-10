@@ -45,6 +45,7 @@ function removeSolutions () {
   del.sync('dist');
   return gulp.src(addDefSrcIgnore(['**', '!**/REMOVE{,/**}']), {dot: true})
     .pipe($.replace(/^\s*(\/\/|<!--|\/\*)\s*REMOVE-START[\s\S]*?REMOVE-END\s*(\*\/|-->)?\s*$/gm, ''))
+    .pipe($.replace(/REMOVE\//gm, ''))
     .pipe(gulp.dest('dist'));
 }
 

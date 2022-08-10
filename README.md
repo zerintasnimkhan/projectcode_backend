@@ -31,9 +31,11 @@ Check out the difference between [blocking and non-blocking code](https://nodejs
   - `router.js` - Contains all your routing code
   - `db.js` - Where you keep your storage logic
 
-- Finally modify your client so that:
+- Modify your client so that:
   - When it loads, it gets all messages from the server.
   - Each time a new message is written, it posts it to the server.
+
+- Take a look at the `node.test.js` file to see an example of a unit test for the `/` endpoint, and complete the two tests that are missing for the `/messages` endpoint.
 
 If all the above has been implemented correctly, you should now be able to reload the client (or open a new one in another browser tab) and see all the previous messages. Rejoice!
 
@@ -43,6 +45,7 @@ Would you like to be able to do all of this much faster? If so, you’re ready t
 
 - Then recreate your server using Express (start from [this template](https://expressjs.com/en/starter/hello-world.html)).
 - After you’re done with the transition, refactor your architecture to follow an [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern. In this case you only need the “M” and “C” part (since your “V” is directly rendered in the client).
+- Don’t forget to add unit tests in the `express.test.js` file.
 
 ### Koa
 
@@ -50,6 +53,7 @@ Directly from the creators of Express, meet its successor: Koa. Before diving in
 
 - Now, check out [the docs](http://koajs.com/), and compare where Koa differs from Express.
 - Finally rebuild your server, taking advantage of the new APIs.
+- Don’t forget to add unit tests in the `koa.test.js` file.
 
 ## Getting started
 
@@ -62,4 +66,3 @@ You’re ready to go! Remember to make small, incremental, and descriptive commi
 ## Extra credits
 
 - Persist your messages in-memory so that they're not erased when the server restarts. Create a `data.json` file on disk, where you dump and persist all those in-memory messages every five seconds. [Config Nodemon](https://github.com/remy/nodemon#config-files) so that it ignores changes to this file (to avoid continuous reloading), and use [`.gitignore`](https://git-scm.com/docs/gitignore) to exclude the file from your respository (you don’t want the messages data to be part of the app code).
-- Add unit tests for each version of your server, using [Jest](https://jestjs.io/) as a [dev-dependency](https://docs.npmjs.com/cli/install) (read the docs and see how it works).
