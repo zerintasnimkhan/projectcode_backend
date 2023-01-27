@@ -32,7 +32,7 @@ function showMessage (msg) {
 
 function simulateIncomingMessages () {
   setTimeout(() => {
-    $.get('https://cw-quotes.herokuapp.com/api/quotes/random', data => {
+    $.get('http://cw-api.eu-west-3.elasticbeanstalk.com/quotes/random', data => {
       const msg = new Message(data.result.text, false, Date.now());
 
       showMessage(msg);
