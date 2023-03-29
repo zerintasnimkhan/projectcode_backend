@@ -4,7 +4,7 @@ It’s time to move to the back-end side of the force! The chat client you creat
 
 This project is divided in 3 steps, aim to complete one section per day. For each section use the respective folder in the `/server` directory, and save the required dependencies in the global `package.json`.
 
-Finally, use [Nodemon](https://github.com/remy/nodemon) it will make your life much easier.
+Finally, use [Nodemon](https://github.com/remy/nodemon), or the `--watch` flag in Node 19+, it will make your life much easier.
 
 ### Bare Node
 
@@ -66,3 +66,7 @@ You’re ready to go! Remember to make small, incremental, and descriptive commi
 ## Extra credits
 
 - Persist your messages in-memory so that they're not erased when the server restarts. Create a `data.json` file on disk, where you dump and persist all those in-memory messages every five seconds. [Config Nodemon](https://github.com/remy/nodemon#config-files) so that it ignores changes to this file (to avoid continuous reloading), and use [`.gitignore`](https://git-scm.com/docs/gitignore) to exclude the file from your respository (you don’t want the messages data to be part of the app code).
+
+- In the backend, create UPDATE and DELETE routes for editing and deleting messages.
+
+- In the frontend, implement the appropriate user interface (UI) elements to allow users to use these features. These could include buttons or forms for initiating the update or delete action, as well as appropriate confirmation or notification messages.
