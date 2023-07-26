@@ -35,7 +35,7 @@ $(() => {
 
   function simulateIncomingMessages () {
     setTimeout(() => {
-      $.get('http://cw-api.eu-west-3.elasticbeanstalk.com/quotes/random', data => {
+      $.get('http://127.0.0.1:3000/api/send/message', data => {
         const msg = new Message(data.result.text, false, Date.now());
 
         showMessage(msg);
