@@ -35,7 +35,7 @@ $(() => {
 
   function simulateIncomingMessages () {
     setTimeout(() => {
-      $.get('http://127.0.0.1:3000/api/send/message', data => {
+      $.get('/api/v1/all/messages', data => {
         const msg = new Message(data.result.text, false, Date.now());
 
         showMessage(msg);
